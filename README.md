@@ -1,4 +1,4 @@
-# flutter Firebase Crashlytics App
+# Flutter Firebase Crashlytics App
 
 A new flutter app for demonstrating Firebase Crashlytics.
 
