@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
-import 'firebase_options.dart';
+import 'firebase_options_gitignore.dart';
 import 'home_screen.dart';
 
 Future<void> main() async {
@@ -11,7 +11,7 @@ Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
     if (Platform.isIOS) {
       await Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform,
+        options: Options.currentPlatform,
       );
     } else {
       await Firebase.initializeApp();
