@@ -1,11 +1,13 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:animated_fab_button_menu/animated_fab_button_menu.dart';
 import 'package:flutter_crashlytics_app/constants/app_constants.dart';
 import 'package:flutter_crashlytics_app/utils/text_styles.dart';
+
+import 'utils/src/fab_menu.dart';
+import 'utils/src/fab_menus_item.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -81,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
   }
 
-  Widget buildFabMenu()
+  buildFabMenu()
   {
     return FabMenu(
         fabBackgroundColor: Colors.amber[600],
@@ -99,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
         overlayOpacity: 0.6,
         overlayColor: Colors.amber[600],
         children: [
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.customKeySelectedText,
             onTap: () {
               Navigator.pop(context);
@@ -113,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.generateLogsSelectedText,
             onTap: () {
               Navigator.pop(context);
@@ -127,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.forceCrashSelectedText,
             onTap: () {
               sleep(const Duration(seconds: 3));
@@ -135,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.throwErrorSelectedText,
             onTap: () {
               Navigator.pop(context);
@@ -149,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.zonedErrorSelectedText,
             onTap: () {
               Navigator.pop(context);
@@ -168,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.fatalErrorSelectedText,
             onTap: () async {
               Navigator.pop(context);
@@ -189,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             style: AppTextStyles.boldWhiteTextStyle,
           ),
-          MenuItem(
+          FabMenuItem(
             title: AppConstants.nonFatalErrorSelectedText,
             onTap: () async {
               Navigator.pop(context);

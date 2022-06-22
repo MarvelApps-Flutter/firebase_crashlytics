@@ -1,15 +1,23 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'firebase_options.dart';
 import 'home_screen.dart';
-
 
 Future<void> main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp(
-    );
+    if (Platform.isIOS) {
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+    } else {
+      await Firebase.initializeApp();
+    }
+    // await Firebase.initializeApp(
+    // );
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(MyApp());
   }, (error, stackTrace) {
@@ -32,4 +40,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
