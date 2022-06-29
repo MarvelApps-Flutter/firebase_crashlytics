@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_crashlytics_app/constants/app_constants.dart';
 import 'package:flutter_crashlytics_app/utils/text_styles.dart';
 
-import 'utils/src/fab_menu.dart';
-import 'utils/src/fab_menus_item.dart';
+import '../utils/src/fab_menu.dart';
+import '../utils/src/fab_menus_item.dart';
 
 
 class HomeScreen extends StatefulWidget {

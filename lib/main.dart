@@ -3,8 +3,9 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_crashlytics_app/screens/splash_screen.dart';
 import 'firebase_options_gitignore.dart';
-import 'home_screen.dart';
+import 'screens/home_screen.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
