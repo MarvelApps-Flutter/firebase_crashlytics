@@ -2,6 +2,9 @@
 
 A new flutter app for demonstrating Firebase Crashlytics.
 
+# Demo
+<img src="https://github.com/MarvelApps-Flutter/firebase_crashlytics/blob/dev/screenshots/gif/demo.gif" height="480px"></td>
+
 # Android Screenshots
 
 <table>
