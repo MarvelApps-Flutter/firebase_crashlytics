@@ -26,4 +26,4 @@ A new flutter app for demonstrating Firebase Crashlytics.
  
  # Firebase Crashlytics Analysis Info
  
-<img src="https://github.com/MarvelApps-Flutter/firebase_crashlytics/blob/dev/screenshots/analysis/analysis.png" height="1000px" width="1000px"></td>
+<img src="https://github.com/MarvelApps-Flutter/firebase_crashlytics/blob/dev/screenshots/analysis/analysis.png" height="800px" width="700px"></td>
